@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import { BrowserRouter } from 'react-router-dom';
 // import { useFeaturedBanners } from '../../utils/hooks/useFeaturedBanners';
 import Header from '../Header';
 import Content from '../Content';
@@ -10,11 +10,11 @@ function App() {
   // console.log(data, isLoading);
 
   return (
-    <div className="App">
+    <BrowserRouter>
       <Header />
       <Content />
       <Footer />
-    </div>
+    </BrowserRouter>
   );
 }
 
