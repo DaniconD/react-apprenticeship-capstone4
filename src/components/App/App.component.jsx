@@ -12,7 +12,6 @@ function App() {
 
   const renderPageHandle = (message) => {
     setPage(message);
-    console.log(page);
   };
 
   return (

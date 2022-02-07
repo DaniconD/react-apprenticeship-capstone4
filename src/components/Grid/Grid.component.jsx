@@ -6,7 +6,7 @@ import {
   ItemContainer,
   InfoContainer,
 } from './StyledGrid';
-// import { StyledButton } from '../StyledComponents/StyledComponentsList';
+import { StyledButton } from '../StyledComponents/StyledComponentsList';
 
 function Grid({ gridItems, renderPageHandle }) {
   // eslint-disable-next-line react/no-unstable-nested-components
@@ -43,14 +43,14 @@ function Grid({ gridItems, renderPageHandle }) {
       <h2>Featured Prodcuts</h2>
       <h2>Grid</h2>
       <GridList />
-      <button
+      <StyledButton
         type="button"
         onClick={() => {
           renderPageHandle('load products');
         }}
       >
         View all products
-      </button>
+      </StyledButton>
     </GridContainer>
   );
 }

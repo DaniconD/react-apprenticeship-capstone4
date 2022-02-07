@@ -17,6 +17,13 @@ export const HeaderContainer = styled.div`
   position: fixed;
   top: 0;
   z-index: 50;
+  button {
+    background-color: transparent;
+    border: none;
+    &:hover {
+      cursor: pointer;
+    }
+  }
 `;
 
 export const LogoName = styled.div`

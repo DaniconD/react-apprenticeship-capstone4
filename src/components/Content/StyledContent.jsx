@@ -8,6 +8,7 @@ export const ContentContainer = styled.div`
   color: ${dark};
   background-color: ${light};
   margin: 0;
+  min-height: 100vh;
   padding: 100px 5% 0 5%;
   width: 90%;
   a {

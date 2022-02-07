@@ -13,8 +13,9 @@ export const StyledButton = styled.button`
   color: ${dark};
   background-color: ${greyColor};
   border-radius: 10px;
+  border: none;
   font-size: 1.5rem;
-  padding: 10px;
+  padding: 10px 20px;
   &:hover {
     color: white;
     background-color: ${highlightPink};
