@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { BsDot } from 'react-icons/bs';
 import {
   GridContainer,
@@ -9,7 +8,7 @@ import {
 } from './StyledGrid';
 // import { StyledButton } from '../StyledComponents/StyledComponentsList';
 
-function Grid({ gridItems }) {
+function Grid({ gridItems, renderPageHandle }) {
   // eslint-disable-next-line react/no-unstable-nested-components
   function GridList() {
     return (
@@ -44,7 +43,14 @@ function Grid({ gridItems }) {
       <h2>Featured Prodcuts</h2>
       <h2>Grid</h2>
       <GridList />
-      <Link to="product-list">View all products</Link>
+      <button
+        type="button"
+        onClick={() => {
+          renderPageHandle('load products');
+        }}
+      >
+        View all products
+      </button>
     </GridContainer>
   );
 }

@@ -10,14 +10,17 @@ import Grid from '../Grid';
 
 import { HomeContainer } from './StyledHome';
 
-function Home() {
+function Home({ renderPageHandle }) {
   return (
     <HomeContainer>
       <Slider sliderItems={BannersDataUs.results} />
       <br />
       <Carousel carouselItems={CategoriesDataUs.results} />
       <br />
-      <Grid gridItems={ProductsDataUs.results} />
+      <Grid
+        gridItems={ProductsDataUs.results}
+        renderPageHandle={renderPageHandle}
+      />
     </HomeContainer>
   );
 }

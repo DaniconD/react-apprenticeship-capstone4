@@ -1,19 +1,23 @@
 import React, { useState } from 'react';
 import { FiShoppingCart } from 'react-icons/fi';
 import { BiSearch } from 'react-icons/bi';
-import { Link } from 'react-router-dom';
 import logo from '../../logo.svg';
 import { HeaderContainer, LogoName, SearchBar } from './StyledHeader';
 
-function Header() {
+function Header({ renderPageHandle }) {
   const [searchText, setSearchText] = useState('');
 
   return (
     <HeaderContainer>
       <LogoName>
-        <Link to="/">
+        <button
+          type="button"
+          onClick={() => {
+            renderPageHandle('home');
+          }}
+        >
           <img src={logo} alt="logo" width="30" height="30" />
-        </Link>
+        </button>
         <h1>Ecommerce Store</h1>
       </LogoName>
       <SearchBar>
