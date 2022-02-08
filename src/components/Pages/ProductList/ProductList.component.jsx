@@ -3,14 +3,18 @@ import {
   MdOutlineArrowBackIos,
   MdOutlineArrowForwardIos,
 } from 'react-icons/md';
+import { BsDot } from 'react-icons/bs';
 import {
   ComponentContainer,
-  ProductListSideMenu,
   ProducListContainer,
-  MenuContainer,
+  SideMenuContainer,
+  ItemList,
+  ItemContainer,
+  InfoContainer,
 } from './ProductListStyled';
 
 import CategoriesDataUs from '../../../mocks/en-us/product-categories.json';
+import ProductsDataUs from '../../../mocks/en-us/products.json';
 
 function ProductList() {
   const [sideBar, setSideBar] = useState(false);
@@ -19,30 +23,62 @@ function ProductList() {
   };
 
   // eslint-disable-next-line react/no-unstable-nested-components
-  function MenuList() {
+  function SideMenuList() {
     return (
-      <MenuContainer>
+      <SideMenuContainer>
         {CategoriesDataUs.results.map((item) => (
           <button key={item.id} type="button" onClick={() => {}}>
             <li>{item.data.name}</li>
           </button>
         ))}
         <MdOutlineArrowBackIos
-          className="rightArrow"
-          onClick={() => sideBarHandle()}
-        />
-      </MenuContainer>
-    );
-  }
-  return (
-    <ComponentContainer>
-      {sideBar && <ProductListSideMenu>{MenuList()}</ProductListSideMenu>}
-      <ProducListContainer>
-        <h2>This is the Product List Page</h2>
-        <MdOutlineArrowForwardIos
           className="leftArrow"
           onClick={() => sideBarHandle()}
         />
+      </SideMenuContainer>
+    );
+  }
+
+  // eslint-disable-next-line react/no-unstable-nested-components
+  function ProductGrid() {
+    return (
+      <div>
+        <ItemList>
+          {ProductsDataUs.results.map((item) => (
+            <ItemContainer key={item.id}>
+              <img
+                src={item.data.mainimage.url}
+                alt={item.data.mainimage.alt}
+              />
+              <InfoContainer>
+                <p className="title">{item.data.name}</p>
+                <p>
+                  <BsDot />
+                  <b>Category: </b>
+                  {item.data.category.slug}
+                </p>
+                <p>
+                  <BsDot />
+                  <b>Price: </b>${item.data.price}
+                </p>
+              </InfoContainer>
+            </ItemContainer>
+          ))}
+        </ItemList>
+      </div>
+    );
+  }
+
+  return (
+    <ComponentContainer>
+      {sideBar && <SideMenuList />}
+      <ProducListContainer>
+        <h2>This is the Product List Page</h2>
+        <MdOutlineArrowForwardIos
+          className="rightArrow"
+          onClick={() => sideBarHandle()}
+        />
+        <ProductGrid />
       </ProducListContainer>
     </ComponentContainer>
   );

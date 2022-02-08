@@ -2,7 +2,7 @@ import React from 'react';
 
 import BannersDataUs from '../../mocks/en-us/featured-banners.json';
 import CategoriesDataUs from '../../mocks/en-us/product-categories.json';
-import ProductsDataUs from '../../mocks/en-us/featured-products.json';
+import FeaturedProductsDataUs from '../../mocks/en-us/featured-products.json';
 
 import Slider from '../Slider';
 import Carousel from '../Carousel';
@@ -18,7 +18,7 @@ function Home({ renderPageHandle }) {
       <Carousel carouselItems={CategoriesDataUs.results} />
       <br />
       <Grid
-        gridItems={ProductsDataUs.results}
+        gridItems={FeaturedProductsDataUs.results}
         renderPageHandle={renderPageHandle}
       />
     </HomeContainer>
