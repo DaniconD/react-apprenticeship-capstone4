@@ -21,7 +21,6 @@ export const SliderContainer = styled.div`
     font-size: 3rem;
     position: absolute;
     z-index: 10;
-    cursor: pointer;
     user-select: none;
     &:hover {
       color: ${highlightPink};

@@ -1,5 +1,25 @@
 import styled from 'styled-components';
 
+export const ComponentContainer = styled.div`
+  svg {
+    font-size: 3rem;
+    &:hover {
+      color: pink;
+    }
+  }
+  .leftArrow,
+  .rightArrow {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    z-index: 5;
+  }
+
+  .rightArrow {
+    left: 290px;
+  }
+`;
+
 export const ProductListSideMenu = styled.div`
   display: flex;
   flex-direction: column;
@@ -13,6 +33,21 @@ export const ProductListSideMenu = styled.div`
   padding: 20px;
   position: fixed;
   width: 250px;
+  z-index: 10;
+  li {
+    font-size: calc(10px + 2vmin);
+  }
+  button {
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    text-align: left;
+    &:hover {
+      color: pink;
+      padding-left: 15px;
+      border-left: solid black 1px;
+    }
+  }
 `;
 
 export const ProducListContainer = styled.div`

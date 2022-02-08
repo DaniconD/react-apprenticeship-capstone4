@@ -1,6 +1,10 @@
-import React from 'react';
-import { IoIosArrowDropright } from 'react-icons/io';
+import React, { useState } from 'react';
 import {
+  MdOutlineArrowBackIos,
+  MdOutlineArrowForwardIos,
+} from 'react-icons/md';
+import {
+  ComponentContainer,
   ProductListSideMenu,
   ProducListContainer,
   MenuContainer,
@@ -9,6 +13,11 @@ import {
 import CategoriesDataUs from '../../../mocks/en-us/product-categories.json';
 
 function ProductList() {
+  const [sideBar, setSideBar] = useState(false);
+  const sideBarHandle = () => {
+    setSideBar(!sideBar);
+  };
+
   // eslint-disable-next-line react/no-unstable-nested-components
   function MenuList() {
     return (
@@ -18,19 +27,24 @@ function ProductList() {
             <li>{item.data.name}</li>
           </button>
         ))}
+        <MdOutlineArrowBackIos
+          className="rightArrow"
+          onClick={() => sideBarHandle()}
+        />
       </MenuContainer>
     );
   }
   return (
-    <div>
-      <ProductListSideMenu>{MenuList()}</ProductListSideMenu>
-      <button type="button" onClick={() => {}}>
-        <IoIosArrowDropright />
-      </button>
+    <ComponentContainer>
+      {sideBar && <ProductListSideMenu>{MenuList()}</ProductListSideMenu>}
       <ProducListContainer>
         <h2>This is the Product List Page</h2>
+        <MdOutlineArrowForwardIos
+          className="leftArrow"
+          onClick={() => sideBarHandle()}
+        />
       </ProducListContainer>
-    </div>
+    </ComponentContainer>
   );
 }
 
