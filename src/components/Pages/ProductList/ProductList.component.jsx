@@ -15,6 +15,7 @@ import {
 
 import CategoriesDataUs from '../../../mocks/en-us/product-categories.json';
 import ProductsDataUs from '../../../mocks/en-us/products.json';
+import Pagination from '../../Pagination/Pagination.component';
 
 function ProductList() {
   const [sideBar, setSideBar] = useState(false);
@@ -85,6 +86,7 @@ function ProductList() {
         <ProductGrid />
         {console.log(filteredCategories)}
       </ProducListContainer>
+      <Pagination />
     </ComponentContainer>
   );
 }
