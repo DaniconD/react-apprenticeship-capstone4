@@ -68,6 +68,10 @@ function ProductList() {
       </div>
     );
   }
+  const f = 'furniture asd';
+  const filteredCategories = ProductsDataUs.results.filter((item) =>
+    item.data.category.slug.toLowerCase().includes(f)
+  );
 
   return (
     <ComponentContainer>
@@ -79,6 +83,7 @@ function ProductList() {
           onClick={() => sideBarHandle()}
         />
         <ProductGrid />
+        {console.log(filteredCategories)}
       </ProducListContainer>
     </ComponentContainer>
   );
