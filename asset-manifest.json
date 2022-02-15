@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/react-apprenticeship-capstone4/static/css/main.dc7ad0f6.chunk.css",
+    "main.js": "/react-apprenticeship-capstone4/static/js/main.f8adf743.chunk.js",
+    "main.js.map": "/react-apprenticeship-capstone4/static/js/main.f8adf743.chunk.js.map",
+    "runtime-main.js": "/react-apprenticeship-capstone4/static/js/runtime-main.ea12a278.js",
+    "runtime-main.js.map": "/react-apprenticeship-capstone4/static/js/runtime-main.ea12a278.js.map",
+    "static/js/2.6787ca6f.chunk.js": "/react-apprenticeship-capstone4/static/js/2.6787ca6f.chunk.js",
+    "static/js/2.6787ca6f.chunk.js.map": "/react-apprenticeship-capstone4/static/js/2.6787ca6f.chunk.js.map",
+    "index.html": "/react-apprenticeship-capstone4/index.html",
+    "static/css/main.dc7ad0f6.chunk.css.map": "/react-apprenticeship-capstone4/static/css/main.dc7ad0f6.chunk.css.map",
+    "static/js/2.6787ca6f.chunk.js.LICENSE.txt": "/react-apprenticeship-capstone4/static/js/2.6787ca6f.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/react-apprenticeship-capstone4/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ea12a278.js",
+    "static/js/2.6787ca6f.chunk.js",
+    "static/css/main.dc7ad0f6.chunk.css",
+    "static/js/main.f8adf743.chunk.js"
+  ]
+}
