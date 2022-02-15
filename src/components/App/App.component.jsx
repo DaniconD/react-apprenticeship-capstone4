@@ -1,5 +1,4 @@
-import React from 'react';
-import './App.css';
+import React, { useState } from 'react';
 // import { useFeaturedBanners } from '../../utils/hooks/useFeaturedBanners';
 import Header from '../Header';
 import Content from '../Content';
@@ -9,10 +8,16 @@ function App() {
   // const { data, isLoading } = useFeaturedBanners();
   // console.log(data, isLoading);
 
+  const [page, setPage] = useState('home');
+
+  const renderPageHandle = (message) => {
+    setPage(message);
+  };
+
   return (
-    <div className="App">
-      <Header />
-      <Content />
+    <div>
+      <Header renderPageHandle={renderPageHandle} />
+      <Content renderPageHandle={renderPageHandle} loadPage={page} />
       <Footer />
     </div>
   );

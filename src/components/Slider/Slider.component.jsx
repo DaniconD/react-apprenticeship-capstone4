@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
-import { IoIosArrowDropleft, IoIosArrowDropright } from 'react-icons/io';
+import {
+  MdOutlineArrowBackIos,
+  MdOutlineArrowForwardIos,
+} from 'react-icons/md';
 import { SliderContainer } from './StyledSlider';
 
 function Slider({ sliderItems }) {
@@ -19,8 +22,8 @@ function Slider({ sliderItems }) {
   function SliderList() {
     return (
       <ul>
-        <IoIosArrowDropleft className="leftArrow" onClick={prevSlide} />
-        <IoIosArrowDropright className="rightArrow" onClick={nextSlide} />
+        <MdOutlineArrowBackIos className="leftArrow" onClick={prevSlide} />
+        <MdOutlineArrowForwardIos className="rightArrow" onClick={nextSlide} />
         {sliderItems.map(
           (item, index) =>
             index === current && (

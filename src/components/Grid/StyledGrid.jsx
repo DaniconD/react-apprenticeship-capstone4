@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
-const highlightPink = '#ea4c8966';
-const greyColor = '#f3f3f3';
-
 export const GridContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   img {
     width: 150px;
   }
@@ -17,10 +17,11 @@ export const ListContainer = styled.div`
   width: 100%;
 `;
 
-export const ItemList = styled.ul`
+export const ItemList = styled.div`
   display: flex;
-  grid-gap: 1rem;
+  grid-gap: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+
   justify-content: center;
   flex-wrap: wrap;
 

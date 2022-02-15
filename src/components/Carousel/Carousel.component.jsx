@@ -13,7 +13,6 @@ function Carousel({ carouselItems }) {
               alt={item.data.main_image.alt}
             />
             <p>{item.data.name}</p>
-            {/* Todo: el mock file que cada componente esta utilizando es el incorrecto, checa las especificaicones del proyecto para que veas cual es el indicado */}
           </ItemContainer>
         ))}
       </ul>
